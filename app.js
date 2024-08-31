@@ -32,9 +32,9 @@ app.use(session({
 app.use(flash()); 
 
 app.use((req,res,next)=>{
-  res.locals.success_msg=req.flash("success_msg")
-  res.locals.error_msg=req.flash("eror_msg")
-  next
+  res.locals.success_msg=req.flash(`sucess_msg`)
+  res.locals.error_msg=req.flash(`error_msg)
+  next();
 })
 
 app.use('/',require('./route/index'))
