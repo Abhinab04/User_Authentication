@@ -14,10 +14,10 @@ router.get('/register', (req, res) => {
 })
 
 router.post('/register', (req, res) => {
-    const name = req.body;
-    const email = req.body;
-    const password = req.body;
-    const password2 = req.body;
+    const name = req.body.name;
+    const email = req.body.email;
+    const password = req.body.password;
+    const password2 = req.body.password2;
 
     let error = [];
     //empty blank error
